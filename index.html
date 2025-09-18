@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Researcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Your Name</h1>
+      <p class="sub">Professor — Department / Institution</p>
+      <p class="contact"><a href="mailto:you@domain.edu">you@domain.edu</a> · Madison, WI</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Ph.D., Field — University, 20XX</li>
+        <li>M.S., Field — University, 20XX</li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>Research interests</h2>
+      <ul>
+        <li>Mixed-integer optimization</li>
+        <li>Stochastic programming</li>
+        <li>Applications of optimization</li>
+      </ul>
+    </section>
+
+    <section id="honors">
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>Example Award, Year</li>
+        <li>Another Award, Year</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Selected publications</h2>
+      <ol>
+        <li>Author, Author, <strong>"Title"</strong>, Journal, Year. <a href="#">Preprint</a></li>
+        <li>Author et al., <strong>"Title"</strong>, Journal, Year. <a href="#">Preprint</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name — <a href="https://github.com/yourusername">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
