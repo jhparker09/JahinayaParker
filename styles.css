@@ -4,6 +4,15 @@ body{
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin:0; color:#111; background:#fff; line-height:1.55;
 }
+.profile-pic {
+    width: 150px;          /* adjust size */
+    height: 150px;         /* keep square */
+    border-radius: 50%;    /* makes it a circle */
+    object-fit: cover;     /* crops to fit nicely */
+    display: block;
+    margin: 0 auto 15px auto; /* center above your name */
+    border: 3px solid var(--primary-color); /* optional pink border */
+}
 .container{max-width:var(--max-width); margin:0 auto; padding:20px;}
 .site-header{border-bottom:1px solid #eee; padding:18px 0;}
 .site-header h1{margin:0; font-size:1.8rem;}
