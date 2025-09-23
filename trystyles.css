@@ -260,6 +260,34 @@ footer{
   cursor:pointer;
 }
 
+/* Education grid – reuses the card styling */
+.education-grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+}
+
+/* Slightly smaller heading inside each card */
+.edu-item h3{
+  margin:0 0 6px;
+  font-size:1.1rem;
+}
+
+/* Institution line – a bit bolder for quick scanning */
+.edu-institution{
+  margin:0 0 4px;
+  font-weight:600;
+  color:var(--text);
+}
+
+/* Details – muted colour like other paragraph text */
+.edu-details{
+  margin:0;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+
 /* Responsive */
 @media (max-width:900px){
   .hero-grid{
