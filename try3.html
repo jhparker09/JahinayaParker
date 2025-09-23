@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jahinaya Parker — Researcher | Projects & Publications</title>
+  <meta name="description" content="Jahinaya Parker — research, projects, publications. PhD candidate in ... (short)." />
+  <!-- Google font (optional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Open Graph (replace placeholders) -->
+  <meta property="og:title" content="Jahinaya Parker — Researcher" />
+  <meta property="og:description" content="Researcher in X. Projects, publications, contact." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <a href="#" aria-label="home">
+          <img src="/assets/profile.jpg" alt="J. Parker portrait" />
+        </a>
+        <div>
+          <div style="font-weight:700">Jahinaya Parker</div>
+          <div style="font-size:0.9rem; color:var(--muted)">PhD candidate — [Your Dept / Univ]</div>
+        </div>
+      </div>
+
+      <nav class="primary" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- mobile menu button -->
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+
+    <!-- hidden mobile nav -->
+    <div id="mobile-nav" style="display:none; padding:10px 20px; border-top:1px solid #eef6f6;">
+      <div class="wrap" style="display:flex; flex-direction:column; gap:8px;">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" role="main">
+    <!-- HERO -->
+    <section class="hero" id="about" aria-labelledby="about-heading">
+      <div class="hero-grid">
+        <div class="profile-photo" aria-hidden="false">
+          <img src="/assets/profile.jpg" alt="Jahinaya Parker smiling portrait" />
+        </div>
+        <div>
+          <h1 id="about-heading">Hi — I'm Jahinaya Parker</h1>
+          <p class="lead">PhD candidate studying [short field: e.g. Human–Computer Interaction / Machine Learning / Neuroscience]. My research focuses on <strong>topic A</a></strong>, <strong>topic B</strong>, and building practical tools for X.</p>
+          <div class="ctas">
+            <a class="btn primary" href="/assets/JahinayaParker_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+            <a class="btn ghost" href="#projects">See projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <div class="projects-grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Project Alpha — Tool for X</h3>
+          <p>A short 1–2 line description; tech stack: Python, React. Link to repo and demo.</p>
+          <p style="margin-top:8px">
+            <a href="https://github.com/..." target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+          </p>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Project Beta — Study on Y</h3>
+          <p>Short description, outcome (e.g., user study with N=24, or published at XXX).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" aria-labelledby="pub-heading">
+      <h2 id="pub-heading">Publications</h2>
+
+      <div class="pub-controls">
+        <input id="pub-search" type="search" placeholder="Search publications (title, author, year)..." aria-label="Search publications" />
+        <div style="margin-left:auto; color:var(--muted); font-size:0.95rem;">Showing <span id="pub-count">2</span> items</div>
+      </div>
+
+      <div class="pub-list" id="pub-list">
+        <article class="pub-item" data-year="2024" data-title="Learning from X" data-authors="J. Parker, A. Smith">
+          <time datetime="2024">2024</time>
+          <div style="1">Learning from X: improving something</div>
+          <div style="color:var(--muted)">J. Parker, A. Smith — Conference on Example Research</div>
+          <p style="margin:8px 0 0"><a class="pdf" href="/pdfs/learning-from-x.pdf" target="_blank" rel="noopener noreferrer">PDF</a> · <a href="https://doi.org/..." target="_blank" rel="noopener noreferrer">DOI</a></p>
+        </article>
+
+        <article class="pub-item" data-year="2023" data-title="A study of Y" data-authors="J. Parker">
+          <time datetime="2023">2023</time>
+          <div style="font-weight:700">A study of Y and its implications</div>
+          <div style="color:var(--muted)">J. Parker — Journal of Examples</div>
+          <p style="margin:8px 0 0"><a class="pdf" href="/pdfs/study-of-y.pdf" target="_blank" rel="noopener noreferrer">PDF</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS: Skills -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="tags" aria-hidden="false">
+        <span class="tag">Python</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">User Research</span>
+        <span class="tag">React</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p style="margin-top:8px">Email: <a href="mailto:jahinaya@example.com">jahinaya@example.com</a></p>
+      <p style="margin-top:6px">Profiles:
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a> ·
+        <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID</a> ·
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="year"></span> Jahinaya Parker — All rights reserved · <a href="/assets/JahinayaParker_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a></small>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top" id="backToTop">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
