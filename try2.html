@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jahinaya Parker — Researcher | Projects & Publications</title>
+  <meta name="description" content="Jahinaya Parker — research, projects, publications. PhD candidate in ... (short)." />
+  <!-- Google font (optional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Open Graph (replace placeholders) -->
+  <meta property="og:title" content="Jahinaya Parker — Researcher" />
+  <meta property="og:description" content="Researcher in X. Projects, publications, contact." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <style>
+    :root{
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --text: #0f172a;
+      --accent: #0ea5a4; /* tweak if you want a different accent */
+      --card: #f8fafc;
+      --max-width: 1100px;
+      --radius: 10px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Reset & basics */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      font-size:clamp(15px, 1.6vw, 16px);
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:focus, button:focus {outline:3px solid rgba(14,165,164,0.2); outline-offset:2px}
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: -999px;
+      background:#111;
+      color:white;
+      padding:8px 12px;
+      z-index:1000;
+    }
+    .skip-link:focus {
+      left: 12px; top:12px;
+      border-radius:6px;
+    }
+
+    .wrap{max-width:var(--max-width); margin:0 auto; padding:0 20px}
+
+    /* Header / Nav */
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:60;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.7));
+      backdrop-filter: blur(4px);
+      border-bottom:1px solid #e6eef0;
+    }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0;}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .brand img{width:44px; height:44px; border-radius:999px; object-fit:cover; border:2px solid var(--accent)}
+    nav.primary {display:flex; gap:12px; align-items:center}
+    nav.primary a{padding:8px 10px; border-radius:8px}
+    nav.primary a:hover{background:#effafa}
+
+    .menu-toggle{display:none; background:none; border:1px solid transparent; padding:8px; border-radius:8px}
+    .menu-toggle svg{width:20px; height:20px}
+
+    /* Hero */
+    .hero{padding:48px 0 36px}
+    .hero-grid{display:grid; grid-template-columns: 220px 1fr; gap:28px; align-items:center}
+    .profile-photo{width:220px; height:220px; border-radius:14px; overflow:hidden; box-shadow:0 6px 18px rgba(12,14,20,0.06)}
+    .profile-photo img{width:100%; height:100%; object-fit:cover}
+    .hero h1{margin:0 0 6px; font-size:clamp(28px,4.2vw,36px)}
+    .hero p.lead{margin:0 0 12px; color:var(--muted); max-width:70ch}
+    .hero .ctas{display:flex; gap:12px; margin-top:8px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer; border:0}
+    .btn.primary{background:var(--accent); color:white}
+    .btn.ghost{background:transparent; border:1px solid #e6eef0}
+
+    /* Main content */
+    main{padding:18px 0 60px}
+    section{padding:30px 0; border-top:1px dashed #f0f4f4}
+    section:first-of-type{border-top:0}
+
+    /* Projects grid */
+    .projects-grid{display:grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))}
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 14px rgba(12,14,20,0.04)}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0 0 12px; color:var(--muted)}
+
+    /* Publications */
+    .pub-controls{display:flex; gap:12px; align-items:center; margin-bottom:12px}
+    .pub-controls input[type="search"]{padding:10px 12px; border-radius:10px; border:1px solid #e6eef0; min-width:220px}
+    .pub-list{display:grid; gap:12px; grid-template-columns: 1fr}
+    .pub-item{padding:12px; background:white; border-radius:8px; border:1px solid #eef6f6}
+    .pub-item time{display:block; color:var(--muted); font-size:0.92em}
+    .pub-item a.pdf{font-weight:600; color:var(--accent)}
+
+    /* Skills (tags) */
+    .tags{display:flex; gap:8px; flex-wrap:wrap}
+    .tag{background:#ecfeff; padding:6px 10px; border-radius:999px; color:var(--text); font-weight:600; font-size:0.95em}
+
+    /* Footer */
+    footer{padding:28px 0; color:var(--muted); border-top:1px solid #f0f4f4; text-align:center}
+
+    /* Back to top */
+    .back-to-top{position:fixed; right:18px; bottom:18px; background:var(--accent); color:white; border-radius:999px; padding:10px; display:none; z-index:80; border:none; cursor:pointer}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns: 1fr; text-align:left}
+      .profile-photo{width:140px; height:140px; margin:auto 0 8px 0}
+      nav.primary{display:none}
+      .menu-toggle{display:inline-flex}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <a href="#" aria-label="Home">
+          <img src="/assets/profile.jpg" alt="J. Parker portrait" />
+        </a>
+        <div>
+          <div style="font-weight:700">Jahinaya Parker</div>
+          <div style="font-size:0.9rem; color:var(--muted)">PhD candidate — [Your Dept / Univ]</div>
+        </div>
+      </div>
+
+      <nav class="primary" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- mobile menu button -->
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+        <!-- simple hamburger icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+
+    <!-- hidden mobile nav -->
+    <div id="mobile-nav" style="display:none; padding:10px 20px; border-top:1px solid #eef6f6;">
+      <div class="wrap" style="display:flex; flex-direction:column; gap:8px;">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" role="main">
+    <!-- HERO -->
+    <section class="hero" id="about" aria-labelledby="about-heading">
+      <div class="hero-grid">
+        <div class="profile-photo" aria-hidden="false">
+          <img src="/assets/profile.jpg" alt="Jahinaya Parker smiling portrait" />
+        </div>
+        <div>
+          <h1 id="about-heading">Hi — I'm Jahinaya Parker</h1>
+          <p class="lead">PhD candidate studying [short field: e.g. Human–Computer Interaction / Machine Learning / Neuroscience]. My research focuses on <strong>topic A</strong>, <strong>topic B</strong>, and building practical tools for X.</p>
+          <div class="ctas">
+            <a class="btn primary" href="/assets/JahinayaParker_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+            <a class="btn ghost" href="#projects">See projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <div class="projects-grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Project Alpha — Tool for X</h3>
+          <p>A short 1–2 line description; tech stack: Python, React. Link to repo and demo.</p>
+          <p style="margin-top:8px">
+            <a href="https://github.com/..." target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="https://demo.example.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+          </p>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Project Beta — Study on Y</h3>
+          <p>Short description, outcome (e.g., user study with N=24, or published at XXX).</p>
+        </article>
+
+        <!-- add more project cards -->
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" aria-labelledby="pub-heading">
+      <h2 id="pub-heading">Publications</h2>
+
+      <div class="pub-controls">
+        <input id="pub-search" type="search" placeholder="Search publications (title, author, year)..." aria-label="Search publications" />
+        <div style="margin-left:auto; color:var(--muted); font-size:0.95rem;">Showing <span id="pub-count">2</span> items</div>
+      </div>
+
+      <div class="pub-list" id="pub-list">
+        <article class="pub-item" data-year="2024" data-title="Learning from X" data-authors="J. Parker, A. Smith">
+          <time datetime="2024">2024</time>
+          <div style="font-weight:700">Learning from X: improving something</div>
+          <div style="color:var(--muted)">J. Parker, A. Smith — Conference on Example Research</div>
+          <p style="margin:8px 0 0"><a class="pdf" href="/pdfs/learning-from-x.pdf" target="_blank" rel="noopener noreferrer">PDF</a> · <a href="https://doi.org/..." target="_blank" rel="noopener noreferrer">DOI</a></p>
+        </article>
+
+        <article class="pub-item" data-year="2023" data-title="A study of Y" data-authors="J. Parker">
+          <time datetime="2023">2023</time>
+          <div style="font-weight:700">A study of Y and its implications</div>
+          <div style="color:var(--muted)">J. Parker — Journal of Examples</div>
+          <p style="margin:8px 0 0"><a class="pdf" href="/pdfs/study-of-y.pdf" target="_blank" rel="noopener noreferrer">PDF</a></p>
+        </article>
+
+        <!-- more publications -->
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="tags" aria-hidden="false">
+        <span class="tag">Python</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">User Research</span>
+        <span class="tag">React</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p style="margin-top:8px">Email: <a href="mailto:jahinaya@example.com">jahinaya@example.com</a></p>
+      <p style="margin-top:6px">Profiles:
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a> ·
+        <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID</a> ·
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="year"></span> Jahinaya Parker — All rights reserved · <a href="/assets/JahinayaParker_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a></small>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top" id="backToTop">↑</button>
+
+  <script>
+    // small helpers: mobile menu toggle
+    (function(){
+      const toggle = document.querySelector('.menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      if(toggle){
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          mobileNav.style.display = expanded ? 'none' : 'block';
+        });
+      }
+
+      // back to top button
+      const back = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if(window.scrollY > 400) back.style.display = 'block';
+        else back.style.display = 'none';
+      });
+      back.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+      // publications search filter (title, authors, year)
+      const search = document.getElementById('pub-search');
+      const list = document.getElementById('pub-list');
+      const items = Array.from(list.querySelectorAll('.pub-item'));
+      const count = document.getElementById('pub-count');
+      function filterPubs(q){
+        q = (q||'').trim().toLowerCase();
+        let visible = 0;
+        items.forEach(it => {
+          const title = it.dataset.title.toLowerCase();
+          const authors = it.dataset.authors ? it.dataset.authors.toLowerCase() : '';
+          const year = it.dataset.year || '';
+          const text = title + ' ' + authors + ' ' + year;
+          const ok = text.includes(q);
+          it.style.display = ok ? '' : 'none';
+          if(ok) visible++;
+        });
+        count.textContent = visible;
+      }
+      search.addEventListener('input', (e) => filterPubs(e.target.value));
+      // initial count
+      filterPubs('');
+
+      // insert current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
