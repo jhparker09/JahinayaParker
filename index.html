@@ -14,6 +14,41 @@
   <meta property="og:image" content="/assets/og-image.png" />
   <link rel="stylesheet" href="trystyles.css">
 </head>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('pub-search');
+  const items = Array.from(document.querySelectorAll('.pub-item'));
+  const countEl = document.getElementById('pub-count');
+
+  function updateList() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    items.forEach(item => {
+      const text =
+        item.dataset.title + ' ' +
+        item.dataset.authors + ' ' +
+        item.textContent;
+
+      if (text.toLowerCase().includes(query)) {
+        item.style.display = '';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    countEl.textContent = visibleCount;
+  }
+
+  // Initial count
+  countEl.textContent = items.length;
+
+  // Search as you type
+  searchInput.addEventListener('input', updateList);
+});
+</script>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
