@@ -259,7 +259,7 @@ section:first-of-type{
   font-size: 1.1em;
 }
 .news-card a {
-  color: var(--accent);
+  color: var(--text);
   text-decoration: none;
 }
 .news-card a:hover {
