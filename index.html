@@ -71,33 +71,6 @@
         </div>
       </div>
     </section>
-
-<!-- EDUCATION -->
-<section id="education" aria-labelledby="education-heading">
-  <h2 id="education-heading">Education</h2>
-
-  <div class="education-grid" role="list">
-    <article class="card edu-item" role="listitem">
-      <h3>Ph.D. - Industrial and Systems Engineering</h3>
-      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – Present</p>
-      <p class="edu-details">Advisor: Prof. John Lee & Anthony McDonald<br>
-        Minor: Quantitative Methods in Behavioral Science</p>
-    </article>
-
-    <article class="card edu-item" role="listitem">
-      <h3>M.Sc. - Industrial and Systems Engineering</h3>
-      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – 2024</p>
-      <p class="edu-details">Relevant courses covering topics such as cognition, perception, and statisitcal methods.</p>
-    </article>
-
-    <article class="card edu-item" role="listitem">
-      <h3>B.Sc. - Industrial Engineering</h3>
-      <p class="edu-institution">University of Massachusetts Amherst – 2018 – 2022</p>
-      <p class="edu-details">Relevant courses covering topics such as research methods and human factors engineering.</p>
-    </article>
-  </div>
-</section>
-
 <section id="news">
   <h2>Recent News</h2>
   <div class="news-grid">
@@ -127,8 +100,31 @@
     </article>
   </div>
 </section>
+<!-- EDUCATION -->
+<section id="education" aria-labelledby="education-heading">
+  <h2 id="education-heading">Education</h2>
 
+  <div class="education-grid" role="list">
+    <article class="card edu-item" role="listitem">
+      <h3>Ph.D. - Industrial and Systems Engineering</h3>
+      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – Present</p>
+      <p class="edu-details">Advisor: Prof. John Lee & Anthony McDonald<br>
+        Minor: Quantitative Methods in Behavioral Science</p>
+    </article>
 
+    <article class="card edu-item" role="listitem">
+      <h3>M.Sc. - Industrial and Systems Engineering</h3>
+      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – 2024</p>
+      <p class="edu-details">Relevant courses covering topics such as cognition, perception, and statisitcal methods.</p>
+    </article>
+
+    <article class="card edu-item" role="listitem">
+      <h3>B.Sc. - Industrial Engineering</h3>
+      <p class="edu-institution">University of Massachusetts Amherst – 2018 – 2022</p>
+      <p class="edu-details">Relevant courses covering topics such as research methods and human factors engineering.</p>
+    </article>
+  </div>
+</section>
 
         <!-- PUBLICATIONS -->
     <section id="publications" aria-labelledby="pub-heading">
@@ -138,9 +134,11 @@
         <input id="pub-search" type="search" placeholder="Search My Publications" aria-label="Search publications" />
         <div style="margin-left:auto; color:var(--muted); font-size:0.95rem;">Showing <span id="pub-count">0</span> items</div>
       </div>
-      <script>
-  const count = document.querySelectorAll('.article').length;
-  document.getElementById('pub-count').textContent = count;
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const count = document.querySelectorAll('.pub-item').length;
+    document.getElementById('pub-count').textContent = count;
+  });
 </script>
 
       <div class="pub-list" id="pub-list">
