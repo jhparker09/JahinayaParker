@@ -101,20 +101,29 @@
 <section id="news">
   <h2>Recent News</h2>
   <div class="news-grid">
+    
     <article class="news-card">
-      <h3><a href="https://engineering.wisc.edu/blog/meet-grad-student-jahinaya-parker-making-sense-of-multitasking/" target="_blank">
-        Student Spotlight: Making Sense of Multitasking
+      <h3><a href="https://www.linkedin.com/posts/uw-madison-dept-of-industrial-and-systems-engineering-isye_3mt-activity-7399069558734639104-gHYK?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOM25YBi044jfsUrBHVi3uNn6nK51CKhV8" target="_blank">
+         ISyE PhD student Jahinaya Parker amongst 3MT finalists!
       </a></h3>
-      <p>Meet UW PhD student Jah’inaya Parker.</p>
-      <time datetime="2024-12-04">December 4, 2024 — UW Madison College of Engineering</time>
+      <p>I have been chosen to present my dissertation work in the 3MT finals.</p>
+      <time datetime="2025-11-13">November 5, 2025 — UW Madison Graduate School</time>
     </article>
-
+    
     <article class="news-card">
       <h3><a href="https://www.linkedin.com/posts/jahinaya-parker-072787201_at-the-beginning-of-may-i-successfully-presented-activity-7337602916221943808-owVS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOM25YBi044jfsUrBHVi3uNn6nK51CKhV8" target="_blank">
         I Passed My Prelims!
       </a></h3>
       <p>I am now a PhD Candidate.</p>
       <time datetime="2025-05-13">May 13, 2025 — Dept of Industrial and Systems Engineering</time>
+    </article>
+    
+    <article class="news-card">
+      <h3><a href="https://engineering.wisc.edu/blog/meet-grad-student-jahinaya-parker-making-sense-of-multitasking/" target="_blank">
+        Student Spotlight: Making Sense of Multitasking
+      </a></h3>
+      <p>Meet UW PhD student Jah’inaya Parker.</p>
+      <time datetime="2024-12-04">December 4, 2024 — UW Madison College of Engineering</time>
     </article>
   </div>
 </section>
@@ -127,10 +136,35 @@
 
       <div class="pub-controls">
         <input id="pub-search" type="search" placeholder="Search My Publications" aria-label="Search publications" />
-        <div style="margin-left:auto; color:var(--muted); font-size:0.95rem;">Showing <span id="pub-count">5</span> items</div>
+        <div style="margin-left:auto; color:var(--muted); font-size:0.95rem;">Showing <span id="pub-count">0</span> items</div>
       </div>
+      <script>
+  const count = document.querySelectorAll('.article').length;
+  document.getElementById('pub-count').textContent = count;
+</script>
 
       <div class="pub-list" id="pub-list">
+<article class="pub-item" data-year="2025" data-title="Summary of research on older drivers from the AAA Foundation for Traffic Safety: 2017–2025." data-authors="j. Parker">
+  <time datetime="2024">2025</time>
+  <div>Summary of research on older drivers from the AAA Foundation for Traffic Safety: 2017–2025.</div>
+  <div style="color:var(--muted)"><strong>J. Parker</strong>, Arnold, L., Kasha, A., & Yang, C. Y. D.<br>AAA Foundation for Traffic Safety – Research Brief</div>
+  <p style="margin:8px 0 0"> <a href="https://aaafoundation.org/summary-of-longroad-research-on-older-drivers-from-the-aaa-foundation-for-traffic-safety-2017-2025/" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+</article>
+
+<article class="pub-item" data-year="2025" data-title="Aggressive driving and road rage." data-authors="Steinbach, R., Kasha, A., Svancara, A.">
+  <time datetime="2024">2025</time>
+  <div>Modeling the Impact of Automation on Driver Distraction: A Queuing Theory Approach.</div>
+  <div style="color:var(--muted)"><strong>J. Parker</strong>, Lee, J., & McDonald, A.<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</div>
+  <p style="margin:8px 0 0"> <a href="https://journals.sagepub.com/doi/10.1177/10711813251383527" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+</article>
+        
+<article class="pub-item" data-year="2025" data-title="Aggressive driving and road rage." data-authors="Steinbach, R., Kasha, A., Svancara, A.">
+  <time datetime="2024">2025</time>
+  <div>Aggressive driving and road rage.</div>
+  <div style="color:var(--muted)">Steinbach, R., Kasha, A., Svancara, A., <strong>J. Parker</strong><br>AAA Foundation for Traffic Safety – Technical Report</div>
+  <p style="margin:8px 0 0"> <a href="https://aaafoundation.org/aggressive-driving-and-road-rage-2/" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+</article>
+        
 <article class="pub-item" data-year="2024" data-title="Human-Machine Interfaces and Vehicle Automation: A Review of the Literature and Recommendations for System Design, Feedback, and Alerts" data-authors="M. Wang, S. Mehrotra, N. Wong, J. Parker, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey">
   <time datetime="2024">2024</time>
   <div>Human-Machine Interfaces and Vehicle Automation: A Review of the Literature and Recommendations for System Design, Feedback, and Alerts</div>
@@ -208,8 +242,8 @@
       
 
       <article class="card" role="listitem">
-          <h3>Response to Automation Uncertianty, Toyota CSRC</h3>
-          <p>Designed a simulator study to observe driver engagement in automation, response to system failures, and changes when engegd in a secondary task.</p>
+          <h3>AI Enabled Manuals to Improve Driver Behavior, Toyota CSRC</h3>
+          <p>Investigated AI enabled tools to improve mental models and warning responses in automated vehicles.</p>
         </article>
       </div>
     </section>
@@ -220,8 +254,7 @@
       <div class="tags" aria-hidden="false">
         <span class="tag">Python</span>
         <span class="tag">Machine Learning</span>
-        <span class="tag">User Research</span>
-        <span class="tag">React</span>
+        <span class="tag">User Experience Research</span>
       </div>
     </section>
 
