@@ -3,7 +3,7 @@
   --muted: #6b7280;
   --text: #0f172a;
   --accent: #FF86A4; /*0ea5a4; /* tweak if you want a different accent */
-  --card: #f8fafc;
+  --card: #FF86A4;
   --max-width: 1100px;
   --radius: 10px;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
