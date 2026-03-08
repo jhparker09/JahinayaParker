@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects | Jahinaya Parker</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="trystyles.css">
+  <style>
+    .project-card{
+      background:var(--card);
+      border-radius:14px;
+      padding:24px 28px;
+      margin-bottom:20px;
+      box-shadow:0 6px 14px rgba(12,14,20,0.04);
+    }
+    .project-header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .project-title{
+      margin:0 0 4px;
+      font-size:1.1rem;
+      line-height:1.4;
+    }
+    .project-meta{
+      font-size:0.88em;
+      color:var(--muted);
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px 16px;
+      margin-bottom:12px;
+    }
+    .project-meta span::before{
+      content:'·';
+      margin-right:6px;
+    }
+    .project-meta span:first-child::before{
+      content:'';
+      margin-right:0;
+    }
+    .project-status{
+      display:inline-block;
+      padding:3px 10px;
+      border-radius:999px;
+      font-size:0.78em;
+      font-weight:600;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+    .status-ongoing{ background:#f0fff4; color:#15803d; }
+    .status-completed{ background:#f8fafc; color:var(--muted); }
+    .project-bullets{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+    .project-bullets li{
+      margin-bottom:4px;
+    }
+    .project-section{
+      margin-bottom:40px;
+    }
+    .project-section-label{
+      font-size:0.78rem;
+      text-transform:uppercase;
+      letter-spacing:0.07em;
+      color:var(--muted);
+      font-weight:600;
+      margin-bottom:16px;
+      padding-bottom:8px;
+      border-bottom:1px solid #f0f4f4;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="home">
+          <img src="profile1.jpg" alt="Jah'inaya Parker" class="profile-pic">
+        </a>
+        <div>
+          <div style="font-weight:700">Jahinaya Parker</div>
+          <div style="font-size:0.9rem; color:var(--muted)">PhD Candidate — Industrial &amp; Systems Engineering @ UW-Madison</div>
+        </div>
+      </div>
+      <nav class="primary" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#news">News</a>
+        <a href="projects.html">Projects</a>
+        <a href="labs.html">Labs</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#awards">Awards</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-nav" style="display:none; padding:10px 20px; border-top:1px solid #eef6f6;">
+      <div class="wrap" style="display:flex; flex-direction:column; gap:8px;">
+        <a href="index.html#about">About</a>
+        <a href="index.html#news">News</a>
+        <a href="projects.html">Projects</a>
+        <a href="labs.html">Labs</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#awards">Awards</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" role="main">
+    <section style="padding-top:36px;">
+      <h1>Projects</h1>
+      <p style="color:var(--muted); margin-top:4px; margin-bottom:32px;">Research projects spanning human factors, automated vehicles, and human-machine interaction.</p>
+
+      <!-- ONGOING -->
+      <div class="project-section">
+        <div class="project-section-label">Ongoing</div>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h2 class="project-title">Using Driver Training and Proactive HMIs to Improve Drivers' Behavior</h2>
+              <div class="project-meta">
+                <span>Toyota CSRC</span>
+                <span>Cognitive Sciences Lab, UW-Madison</span>
+                <span>Sept 2025 – Present</span>
+              </div>
+            </div>
+            <span class="project-status status-ongoing">Ongoing</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Investigating the effects of mitigation strategies for handling limitations in automated vehicles.</li>
+            <li>Designed and implemented driving scenarios in the CARLA simulation environment.</li>
+            <li>Co-authoring manuscripts for submission to academic journals.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h2 class="project-title">Prosociality and Wellbeing in Driving Contexts</h2>
+              <div class="project-meta">
+                <span>Honda Research Institute</span>
+                <span>Cognitive Sciences Lab, UW-Madison</span>
+                <span>Sept 2024 – Present</span>
+              </div>
+            </div>
+            <span class="project-status status-ongoing">Ongoing</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Designed a longitudinal study investigating the effects of mindful interventions on prosociality.</li>
+            <li>Collected VR-simulator data and used natural language processing to assess emotional and thematic patterns.</li>
+            <li>Co-authoring manuscripts for submission to academic journals.</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- COMPLETED -->
+      <div class="project-section">
+        <div class="project-section-label">Completed</div>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h2 class="project-title">Driver-Centric HMI Designs for Automated Vehicles</h2>
+              <div class="project-meta">
+                <span>AAA Foundation for Traffic Safety</span>
+                <span>Human Performance Laboratory, UMass Amherst</span>
+                <span>2021 – 2023</span>
+              </div>
+            </div>
+            <span class="project-status status-completed">Completed</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Conducted research to improve interface design for driver performance and behavior in automated vehicles.</li>
+            <li>Collected experimental data, conducted statistical analyses, and designed guidelines for safe, intuitive systems.</li>
+            <li>Co-authored a technical report and articles published in <em>Transportation Research Part F</em> and <em>Accident Analysis &amp; Prevention</em>.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h2 class="project-title">Aggressive Driving and Road Rage</h2>
+              <div class="project-meta">
+                <span>AAA Foundation for Traffic Safety</span>
+                <span>2024 – 2025</span>
+              </div>
+            </div>
+            <span class="project-status status-completed">Completed</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Analyzed survey data from a nationally representative sample of American drivers.</li>
+            <li>Conducted Structural Topic Modeling and Factor Analysis to extract insights from data.</li>
+            <li>Co-authored a technical report summarizing methodology, findings, and visual data representations.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h2 class="project-title">User Experience Testing of a Driver Training Program</h2>
+              <div class="project-meta">
+                <span>Toyota CSRC</span>
+                <span>Human Performance Laboratory, UMass Amherst</span>
+                <span>2021 – 2022</span>
+              </div>
+            </div>
+            <span class="project-status status-completed">Completed</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Evaluated the user experience of a web-based novice driver training program to inform design improvements.</li>
+            <li>Collected interview and survey data using validated scales and focus groups to understand user satisfaction.</li>
+            <li>Iteratively analyzed data and presented recommendations to stakeholders for implementation.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h2 class="project-title">Responding to Cybersecurity Attacks in Automated Vehicles</h2>
+              <div class="project-meta">
+                <span>National Science Foundation</span>
+                <span>Human Performance Laboratory, UMass Amherst</span>
+                <span>2021 – 2022</span>
+              </div>
+            </div>
+            <span class="project-status status-completed">Completed</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Investigated the relationship between driver awareness of and responses to unexpected vehicle cyberattacks.</li>
+            <li>Collected simulator data using different HMI designs and training programs.</li>
+            <li>Co-authored publications in <em>Safety</em> and <em>Transportation Research Part F</em>.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h2 class="project-title">Teen Drivers, Attention Maintenance, &amp; ADHD Symptomatology</h2>
+              <div class="project-meta">
+                <span>Learning Lab &amp; Human Performance Laboratory, UMass Amherst</span>
+                <span>2021 – 2022</span>
+              </div>
+            </div>
+            <span class="project-status status-completed">Completed</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Collected measures of attention and working memory from teenage drivers.</li>
+            <li>Used simulators and surveys to assess attention maintenance and driving performance.</li>
+            <li>Co-authored a manuscript published in <em>Transportation Research Part F</em>.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p><a href="index.html">← Back to Home</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="year"></span> Jahinaya Parker — All rights reserved · <a href="/assets/JahinayaParker_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a></small>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top" id="backToTop">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

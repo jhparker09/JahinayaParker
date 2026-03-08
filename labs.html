@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Labs | Jahinaya Parker</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="trystyles.css">
+  <style>
+    .university-section{
+      margin-bottom:48px;
+    }
+    .university-label{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:20px;
+    }
+    .university-label h2{
+      margin:0;
+      font-size:1.2rem;
+    }
+    .university-label .uni-years{
+      font-size:0.88em;
+      color:var(--muted);
+      font-weight:400;
+    }
+    .lab-card{
+      background:var(--card);
+      border-radius:14px;
+      padding:24px 28px;
+      margin-bottom:16px;
+      box-shadow:0 6px 14px rgba(12,14,20,0.04);
+    }
+    .lab-header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:8px;
+    }
+    .lab-name{
+      margin:0 0 4px;
+      font-size:1.05rem;
+    }
+    .lab-role{
+      font-size:0.88em;
+      color:var(--muted);
+    }
+    .lab-period{
+      font-size:0.85em;
+      color:var(--accent);
+      font-weight:600;
+      white-space:nowrap;
+      flex-shrink:0;
+      padding-top:3px;
+    }
+    .lab-bullets{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+    .lab-bullets li{
+      margin-bottom:4px;
+    }
+    .lab-link{
+      display:inline-block;
+      margin-top:12px;
+      font-size:0.88em;
+    }
+    .uni-divider{
+      height:2px;
+      background:linear-gradient(to right, var(--accent), transparent);
+      border:none;
+      border-radius:2px;
+      margin-bottom:24px;
+      opacity:0.3;
+    }
+    .lab-articles{
+      margin-top:20px;
+      padding-top:16px;
+      border-top:1px dashed #e6eef0;
+    }
+    .lab-articles-label{
+      font-size:0.75rem;
+      text-transform:uppercase;
+      letter-spacing:0.07em;
+      color:var(--muted);
+      font-weight:600;
+      margin-bottom:10px;
+    }
+    .lab-article{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:8px 0;
+      border-bottom:1px solid #f8fafc;
+    }
+    .lab-article:last-child{ border-bottom:none; }
+    .lab-article-body{ flex:1; }
+    .lab-article-title{
+      font-size:0.9em;
+      line-height:1.4;
+      margin-bottom:2px;
+    }
+    .lab-article-venue{
+      font-size:0.8em;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="home">
+          <img src="profile1.jpg" alt="Jah'inaya Parker" class="profile-pic">
+        </a>
+        <div>
+          <div style="font-weight:700">Jahinaya Parker</div>
+          <div style="font-size:0.9rem; color:var(--muted)">PhD Candidate — Industrial &amp; Systems Engineering @ UW-Madison</div>
+        </div>
+      </div>
+      <nav class="primary" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#news">News</a>
+        <a href="projects.html">Projects</a>
+        <a href="labs.html">Labs</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#awards">Awards</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-nav" style="display:none; padding:10px 20px; border-top:1px solid #eef6f6;">
+      <div class="wrap" style="display:flex; flex-direction:column; gap:8px;">
+        <a href="index.html#about">About</a>
+        <a href="index.html#news">News</a>
+        <a href="projects.html">Projects</a>
+        <a href="labs.html">Labs</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#awards">Awards</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" role="main">
+    <section style="padding-top:36px;">
+      <h1>Research Labs</h1>
+      <p style="color:var(--muted); margin-top:4px; margin-bottom:36px;">Labs and research groups I have been part of across my academic career.</p>
+
+      <!-- UW-MADISON -->
+      <div class="university-section" id="uw-madison">
+        <div class="university-label">
+          <h2>University of Wisconsin-Madison <span class="uni-years">2022 – Present</span></h2>
+        </div>
+        <hr class="uni-divider">
+
+        <div class="lab-card">
+          <div class="lab-header">
+            <div>
+              <h3 class="lab-name">Cognitive Sciences Lab</h3>
+              <div class="lab-role">Research Assistant · Dept of Industrial and Systems Engineering</div>
+            </div>
+            <div class="lab-period">2022 – Present</div>
+          </div>
+          <ul class="lab-bullets">
+            <li>Conducted research on driver performance of secondary tasks during automated driving.</li>
+            <li>Utilized driving simulators, R, Unity game engine, and web servers for data collection and analysis.</li>
+            <li>Developed data collection protocols using Unity and web servers to capture user behavior and interaction.</li>
+            <li>Serving as Lab Manager since January 2025 — facilitating lab tours and representing the lab to students, donors, and visitors.</li>
+          </ul>
+          <div class="lab-articles">
+            <div class="lab-articles-label">Related Publications</div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-conference">Conference</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1177/10711813251383527" target="_blank" rel="noopener noreferrer">Modeling the Impact of Automation on Driver Distraction: A Queuing Theory Approach</a></div>
+                <div class="lab-article-venue">J. Parker, J. Lee, A. McDonald · HFES Annual Meeting · 2025</div>
+              </div>
+            </div>
+            <!-- Add more articles here -->
+          </div>
+        </div>
+
+        <div class="lab-card">
+          <div class="lab-header">
+            <div>
+              <h3 class="lab-name">Human Factors Machine Learning Lab</h3>
+              <div class="lab-role">Lab Member · Dept of Industrial and Systems Engineering</div>
+            </div>
+            <div class="lab-period">2022 – Present</div>
+          </div>
+          <ul class="lab-bullets">
+            <li>Contributing to lab discussions as well as manuscript and presentation preparation.</li>
+            <li>Participating in lab trainings including fNIRS and ECG.</li>
+          </ul>
+          <div class="lab-articles">
+            <div class="lab-articles-label">Related Publications</div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-journal">Journal</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1177/15553434231100123" target="_blank" rel="noopener noreferrer">Do Researchers Use the Levels of Automation Appropriately? How Automation is Discussed in Research</a></div>
+                <div class="lab-article-venue">J. Parker, J. D. Lee, A. McDonald, P. Rau, B. Philips · Journal of Cognitive Engineering and Decision Making · 2023</div>
+              </div>
+            </div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-conference">Conference</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1177/10711813231144789" target="_blank" rel="noopener noreferrer">Bimodal Trust: High and Low Trust in Vehicle Automation Influence Response to Automation Errors</a></div>
+                <div class="lab-article-venue">A. V. Kamaraj, J. Lee, J. Parker et al. · HFES Annual Meeting · 2023</div>
+              </div>
+            </div>
+            <!-- Add more articles here -->
+          </div>
+          <a class="lab-link" href="https://hfmllab.engineering.wisc.edu/staff/parker-jahinaya-jah/" target="_blank" rel="noopener noreferrer">View lab profile ↗</a>
+        </div>
+      </div>
+
+      <!-- UMASS AMHERST -->
+      <div class="university-section" id="umass">
+        <div class="university-label">
+          <h2>University of Massachusetts Amherst <span class="uni-years">2021 – 2022</span></h2>
+        </div>
+        <hr class="uni-divider">
+
+        <div class="lab-card">
+          <div class="lab-header">
+            <div>
+              <h3 class="lab-name">Human Performance Lab</h3>
+              <div class="lab-role">Undergraduate Research Assistant · Dept of Mechanical and Industrial Engineering</div>
+            </div>
+            <div class="lab-period">2021 – 2022</div>
+          </div>
+          <ul class="lab-bullets">
+            <li>Conducted research on takeover performance, interface design, and user interaction in automated driving contexts.</li>
+            <li>Utilized an RTI driving simulator for data collection and R for statistical analysis.</li>
+            <li>Contributed to publications on HMI design, cybersecurity responses, and ADHD symptomatology in driving.</li>
+          </ul>
+          <div class="lab-articles">
+            <div class="lab-articles-label">Related Publications</div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-journal">Journal</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1016/j.trf.2024.01.001" target="_blank" rel="noopener noreferrer">Human-Machine Interfaces and Vehicle Automation: A Review of the Literature and Recommendations for System Design, Feedback, and Alerts</a></div>
+                <div class="lab-article-venue">M. Wang, S. Mehrotra, N. Wong, J. Parker et al. · Transportation Research Part F · 2024</div>
+              </div>
+            </div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-journal">Journal</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1016/j.aap.2024.107644" target="_blank" rel="noopener noreferrer">A Simulator Study Assessing the Effectiveness of Training and Warning Systems on Drivers' Response Performance to Vehicle Cyberattacks</a></div>
+                <div class="lab-article-venue">M. Wang, J. Parker, F. Zhang, S. C. Roberts · Accident Analysis &amp; Prevention · 2024</div>
+              </div>
+            </div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-journal">Journal</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1016/j.aap.2024.107606" target="_blank" rel="noopener noreferrer">The Effect of Human-Machine Interface Modality, Specificity, and Timing on Driver Performance and Behavior While Using Vehicle Automation</a></div>
+                <div class="lab-article-venue">M. Wang, J. Parker, N. Wong et al. · Accident Analysis &amp; Prevention · 2024</div>
+              </div>
+            </div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-journal">Journal</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1016/j.trf.2023.04.009" target="_blank" rel="noopener noreferrer">Impact of Level 2 Automation and ADHD Symptomatology on Young Drivers' Attention Maintenance</a></div>
+                <div class="lab-article-venue">J. Parker, M. Wang, B. Ojuri et al. · Transportation Research Part F · 2023</div>
+              </div>
+            </div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-journal">Journal</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.3390/safety9010005" target="_blank" rel="noopener noreferrer">The Effect of Driving Style on Responses to Unexpected Vehicle Cyberattacks</a></div>
+                <div class="lab-article-venue">F. Zhang, M. Wang, J. Parker, S. C. Roberts · Safety · 2023</div>
+              </div>
+            </div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-conference">Conference</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1177/1071181322661506" target="_blank" rel="noopener noreferrer">How do Drivers Respond to Vehicle Cyberattacks? A Driving Simulator Study</a></div>
+                <div class="lab-article-venue">J. Parker, F. Zhang, M. Wang, S. C. Roberts · HFES Annual Meeting · 2022</div>
+              </div>
+            </div>
+            <!-- Add more articles here -->
+          </div>
+          <a class="lab-link" href="https://people.umass.edu/scroberts/People.html" target="_blank" rel="noopener noreferrer">View lab ↗</a>
+        </div>
+
+        <div class="lab-card">
+          <div class="lab-header">
+            <div>
+              <h3 class="lab-name">Learning Lab</h3>
+              <div class="lab-role">Undergraduate Research Assistant · Dept of Psychology</div>
+            </div>
+            <div class="lab-period">2021 – 2022</div>
+          </div>
+          <ul class="lab-bullets">
+            <li>Conducted experiments on working memory and attention.</li>
+            <li>Programmed cognitive tasks using PsychoPy and MATLAB.</li>
+          </ul>
+          <div class="lab-articles">
+            <div class="lab-articles-label">Related Publications</div>
+            <div class="lab-article">
+              <span class="pub-badge pub-badge-journal">Journal</span>
+              <div class="lab-article-body">
+                <div class="lab-article-title"><a href="https://doi.org/10.1016/j.trf.2023.04.009" target="_blank" rel="noopener noreferrer">Impact of Level 2 Automation and ADHD Symptomatology on Young Drivers' Attention Maintenance</a></div>
+                <div class="lab-article-venue">J. Parker, M. Wang, B. Ojuri et al. · Transportation Research Part F · 2023</div>
+              </div>
+            </div>
+            <!-- Add more articles here -->
+          </div>
+          <a class="lab-link" href="https://www.umasslearninglab.com/alumni" target="_blank" rel="noopener noreferrer">View lab ↗</a>
+        </div>
+      </div>
+
+      <p><a href="index.html">← Back to Home</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="year"></span> Jahinaya Parker — All rights reserved · <a href="/assets/JahinayaParker_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a></small>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top" id="backToTop">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

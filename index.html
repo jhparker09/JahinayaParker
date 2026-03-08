@@ -14,41 +14,6 @@
   <meta property="og:image" content="/assets/og-image.png" />
   <link rel="stylesheet" href="trystyles.css">
 </head>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('pub-search');
-  const items = Array.from(document.querySelectorAll('.pub-item'));
-  const countEl = document.getElementById('pub-count');
-
-  function updateList() {
-    const query = searchInput.value.toLowerCase().trim();
-    let visibleCount = 0;
-
-    items.forEach(item => {
-      const text =
-        item.dataset.title + ' ' +
-        item.dataset.authors + ' ' +
-        item.textContent;
-
-      if (text.toLowerCase().includes(query)) {
-        item.style.display = '';
-        visibleCount++;
-      } else {
-        item.style.display = 'none';
-      }
-    });
-
-    countEl.textContent = visibleCount;
-  }
-
-  // Initial count
-  countEl.textContent = items.length;
-
-  // Search as you type
-  searchInput.addEventListener('input', updateList);
-});
-</script>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -66,8 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <nav class="primary" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#news">News</a>
+        <a href="projects.html">Projects</a>
+        <a href="labs.html">Labs</a>
         <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -81,9 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     <div id="mobile-nav" style="display:none; padding:10px 20px; border-top:1px solid #eef6f6;">
       <div class="wrap" style="display:flex; flex-direction:column; gap:8px;">
         <a href="#about">About</a>
-        <a href="#news">Recent News</a>
-        <a href="#projects">Projects</a>
+        <a href="#news">News</a>
+        <a href="projects.html">Projects</a>
+        <a href="labs.html">Labs</a>
         <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -98,47 +68,44 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div>
           <h1 id="about-heading">Hi — I'm Jah'inaya Parker!</h1>
-          <p class="lead">I am currently a PhD candidate studying Human Factors Engineering at UW-Madison. My research focuses on <strong>performance evaluation</a></strong>, <strong>human machine interfaces</strong>, and <strong>automation.</strong>. I've also done work in wellbeing, aggression, and AI/ML.</p>
+          <p class="lead">I am currently a PhD candidate studying Human Factors Engineering at UW-Madison. My research focuses on <strong>performance evaluation</strong>, <strong>human-machine interfaces</strong>, and <strong>automation</strong>. I've also done work in wellbeing, aggression, and AI/ML.</p>
           <div class="ctas">
             <a class="btn primary" href="/assets/JahinayaParker_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-            <a class="btn ghost" href="#projects">See projects</a>
+            <a class="btn ghost" href="projects.html">See projects</a>
             <a class="btn ghost" href="#publications">See publications</a>
+          </div>
+          <div class="social-btns">
+            <a class="btn ghost" href="https://www.linkedin.com/in/jahinaya-parker-072787201" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a class="btn ghost" href="https://scholar.google.com/citations?user=DfvHj_MAAAAJ&hl=en&authuser=1&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+            <a class="btn ghost" href="https://orcid.org/0000-0001-7583-5174" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
           </div>
         </div>
       </div>
     </section>
-<section id="news">
-  <h2>Recent News</h2>
+
+<!-- RECENT NEWS -->
+<section id="news" aria-labelledby="news-heading">
+  <h2 id="news-heading">Recent News</h2>
   <div class="news-grid">
-    
     <article class="news-card">
-      <h3><a href="https://www.linkedin.com/posts/uw-madison-dept-of-industrial-and-systems-engineering-isye_3mt-activity-7399069558734639104-gHYK?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOM25YBi044jfsUrBHVi3uNn6nK51CKhV8" target="_blank">
-         ISyE PhD student Jahinaya Parker amongst 3MT finalists!
-      </a></h3>
-      <p>I have been chosen to advance to the the 3MT finals to present my dissertation work.</p>
-      <time datetime="2025-11-13">November 5, 2025 — UW-Madison Graduate School</time>
+      <h3><a href="https://www.linkedin.com/posts/uw-madison-dept-of-industrial-and-systems-engineering-isye_3mt-activity-7399069558734639104-gHYK?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOM25YBi044jfsUrBHVi3uNn6nK51CKhV8" target="_blank" rel="noopener noreferrer">ISyE PhD student Jahinaya Parker amongst 3MT finalists!</a></h3>
+      <p>I have been chosen to advance to the 3MT finals to present my dissertation work.</p>
+      <time datetime="2025-11-05">November 5, 2025 — UW-Madison Graduate School</time>
     </article>
-    
     <article class="news-card">
-      <h3><a href="https://www.linkedin.com/posts/jahinaya-parker-072787201_at-the-beginning-of-may-i-successfully-presented-activity-7337602916221943808-owVS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOM25YBi044jfsUrBHVi3uNn6nK51CKhV8" target="_blank">
-        I Passed My Prelims!
-      </a></h3>
+      <h3><a href="https://www.linkedin.com/posts/jahinaya-parker-072787201_at-the-beginning-of-may-i-successfully-presented-activity-7337602916221943808-owVS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOM25YBi044jfsUrBHVi3uNn6nK51CKhV8" target="_blank" rel="noopener noreferrer">I Passed My Prelims!</a></h3>
       <p>I am now a PhD Candidate.</p>
       <time datetime="2025-05-13">May 13, 2025 — Dept of Industrial and Systems Engineering</time>
     </article>
-    
     <article class="news-card">
-      <h3><a href="https://engineering.wisc.edu/blog/meet-grad-student-jahinaya-parker-making-sense-of-multitasking/" target="_blank">
-        Student Spotlight: Making Sense of Multitasking
-      </a></h3>
-      <p>Meet PhD student Jah’inaya Parker.</p>
+      <h3><a href="https://engineering.wisc.edu/blog/meet-grad-student-jahinaya-parker-making-sense-of-multitasking/" target="_blank" rel="noopener noreferrer">Student Spotlight: Making Sense of Multitasking</a></h3>
+      <p>Meet PhD student Jah'inaya Parker.</p>
       <time datetime="2024-12-04">December 4, 2024 — UW Madison College of Engineering</time>
     </article>
   </div>
-  <div class="more-link">
-  <a href="recent_news.html">View all news →</a>
-</div>
+  <div style="margin-top:16px;"><a href="recent_news.html">View all news →</a></div>
 </section>
+
 <!-- EDUCATION -->
 <section id="education" aria-labelledby="education-heading">
   <h2 id="education-heading">Education</h2>
@@ -146,21 +113,24 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="education-grid" role="list">
     <article class="card edu-item" role="listitem">
       <h3>Ph.D. - Industrial and Systems Engineering</h3>
-      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – Present</p>
+      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – Present</p>
       <p class="edu-details">Advisor: Prof. John Lee & Anthony McDonald<br>
         Minor: Quantitative Methods in Behavioral Science</p>
+      <a href="labs.html#uw-madison" style="font-size:0.88em; margin-top:8px; display:inline-block;">View labs →</a>
     </article>
 
     <article class="card edu-item" role="listitem">
       <h3>M.Sc. - Industrial and Systems Engineering</h3>
-      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – 2024</p>
-      <p class="edu-details">Relevant courses covering topics such as cognition, perception, and statisitcal methods.</p>
+      <p class="edu-institution">University of Wisconsin-Madison<br>2022 – 2024</p>
+      <p class="edu-details">Relevant courses covering topics such as cognition, perception, and statistical methods.</p>
+      <a href="labs.html#uw-madison" style="font-size:0.88em; margin-top:8px; display:inline-block;">View labs →</a>
     </article>
 
     <article class="card edu-item" role="listitem">
       <h3>B.Sc. - Industrial Engineering</h3>
-      <p class="edu-institution">University of Massachusetts Amherst – 2018 – 2022</p>
+      <p class="edu-institution">University of Massachusetts Amherst – 2018 – 2022</p>
       <p class="edu-details">Relevant courses covering topics such as research methods and human factors engineering.</p>
+      <a href="labs.html#umass" style="font-size:0.88em; margin-top:8px; display:inline-block;">View labs →</a>
     </article>
   </div>
 </section>
@@ -170,98 +140,113 @@ document.addEventListener('DOMContentLoaded', () => {
       <h2 id="pub-heading">Publications</h2>
 
       <div class="pub-controls">
-        <input id="pub-search" type="search" placeholder="Search My Publications" aria-label="Search publications" />
-        <div style="margin-left:auto; color:var(--muted); font-size:0.95rem;">Showing <span id="pub-count">0</span> items</div>
+        <input id="pub-search" type="search" placeholder="Search publications" aria-label="Search publications" />
+        <div class="pub-filters" role="group" aria-label="Filter by type">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="journal">Journal</button>
+          <button class="filter-btn" data-filter="conference">Conference</button>
+          <button class="filter-btn" data-filter="report">Report</button>
+        </div>
+        <div style="color:var(--muted); font-size:0.95rem; white-space:nowrap;">Showing <span id="pub-count">13</span></div>
       </div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const count = document.querySelectorAll('.pub-item').length;
-    document.getElementById('pub-count').textContent = count;
-  });
-</script>
 
       <div class="pub-list" id="pub-list">
-<article class="pub-item" data-year="2025" data-title="Summary of research on older drivers from the AAA Foundation for Traffic Safety: 2017–2025." data-authors="j. Parker">
-  <time datetime="2024">2025</time>
-  <div>Summary of research on older drivers from the AAA Foundation for Traffic Safety: 2017–2025.</div>
-  <div style="color:var(--muted)"><strong>J. Parker</strong>, Arnold, L., Kasha, A., & Yang, C. Y. D.<br>AAA Foundation for Traffic Safety – Research Brief</div>
-  <p style="margin:8px 0 0"> <a href="https://aaafoundation.org/summary-of-longroad-research-on-older-drivers-from-the-aaa-foundation-for-traffic-safety-2017-2025/" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+
+<article class="pub-item" data-year="2025" data-type="conference" data-title="Modeling the Impact of Automation on Driver Distraction: A Queuing Theory Approach" data-authors="J. Parker, J. Lee, A. McDonald">
+  <div class="pub-item-meta"><time datetime="2025">2025</time><span class="pub-badge pub-badge-conference">Conference</span></div>
+  <div class="pub-item-title">Modeling the Impact of Automation on Driver Distraction: A Queuing Theory Approach</div>
+  <div class="pub-item-venue"><strong>J. Parker</strong>, J. Lee, A. McDonald<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 69</div>
+  <p style="margin:8px 0 0"><a href="https://doi.org/10.1177/10711813251383527" target="_blank" rel="noopener noreferrer">Read Article</a></p>
 </article>
 
-<article class="pub-item" data-year="2025" data-title="Aggressive driving and road rage." data-authors="Steinbach, R., Kasha, A., Svancara, A.">
-  <time datetime="2024">2025</time>
-  <div>Modeling the Impact of Automation on Driver Distraction: A Queuing Theory Approach.</div>
-  <div style="color:var(--muted)"><strong>J. Parker</strong>, Lee, J., & McDonald, A.<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</div>
-  <p style="margin:8px 0 0"> <a href="https://journals.sagepub.com/doi/10.1177/10711813251383527" target="_blank" rel="noopener noreferrer">Read Article</a></p>
-</article>
-        
-<article class="pub-item" data-year="2025" data-title="Aggressive driving and road rage." data-authors="Steinbach, R., Kasha, A., Svancara, A.">
-  <time datetime="2024">2025</time>
-  <div>Aggressive driving and road rage.</div>
-  <div style="color:var(--muted)">Steinbach, R., Kasha, A., Svancara, A., <strong>J. Parker</strong><br>AAA Foundation for Traffic Safety – Technical Report</div>
-  <p style="margin:8px 0 0"> <a href="https://aaafoundation.org/aggressive-driving-and-road-rage-2/" target="_blank" rel="noopener noreferrer">Read Article</a></p>
-</article>
-        
-<article class="pub-item" data-year="2024" data-title="Human-Machine Interfaces and Vehicle Automation: A Review of the Literature and Recommendations for System Design, Feedback, and Alerts" data-authors="M. Wang, S. Mehrotra, N. Wong, J. Parker, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey">
-  <time datetime="2024">2024</time>
-  <div>Human-Machine Interfaces and Vehicle Automation: A Review of the Literature and Recommendations for System Design, Feedback, and Alerts</div>
-  <div style="color:var(--muted)">M. Wang, S. Mehrotra, N. Wong, <strong>J. Parker</strong>, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey<br>Transportation Research Part F: Traffic Psychology and Behaviour</div>
-  <p style="margin:8px 0 0"> <a href="https://doi.org/10.1016/j.trf.2024.01.001" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+<article class="pub-item" data-year="2025" data-type="report" data-title="Aggressive Driving and Road Rage" data-authors="R. Steinbach, A. Kasha, A. Svancara, J. Parker">
+  <div class="pub-item-meta"><time datetime="2025">2025</time><span class="pub-badge pub-badge-report">Report</span></div>
+  <div class="pub-item-title">Aggressive Driving and Road Rage</div>
+  <div class="pub-item-venue">R. Steinbach, A. Kasha, A. Svancara, <strong>J. Parker</strong><br>AAA Foundation for Traffic Safety – Technical Report</div>
+  <p style="margin:8px 0 0"><a href="https://aaafoundation.org/aggressive-driving-and-road-rage-2/" target="_blank" rel="noopener noreferrer">Read Report</a></p>
 </article>
 
-<article class="pub-item" data-year="2024" data-title="A simulator study assessing the effectiveness of training and warning systems on drivers’ response performance to vehicle cyberattacks" data-authors="M. Wang, J. Parker, F. Zhang, S. C. Roberts">
-  <time datetime="2024">2024</time>
-  <div>A simulator study assessing the effectiveness of training and warning systems on drivers’ response performance to vehicle cyberattacks</div>
-  <div style="color:var(--muted)">M. Wang, <strong>J. Parker</strong>, F. Zhang, S. C. Roberts<br>Accident Analysis &amp; Prevention</div>
-  <p style="margin:8px 0 0"><a href="https://doi.org/10.1016/j.aap.2024.02.003" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+<article class="pub-item" data-year="2025" data-type="report" data-title="Summary of Research on Older Drivers from the AAA Foundation for Traffic Safety: 2017–2025" data-authors="J. Parker, L. Arnold, A. Kasha, C. Y. D. Yang">
+  <div class="pub-item-meta"><time datetime="2025">2025</time><span class="pub-badge pub-badge-report">Report</span></div>
+  <div class="pub-item-title">Summary of Research on Older Drivers from the AAA Foundation for Traffic Safety: 2017–2025</div>
+  <div class="pub-item-venue"><strong>J. Parker</strong>, L. Arnold, A. Kasha, C. Y. D. Yang<br>AAA Foundation for Traffic Safety – Research Brief</div>
+  <p style="margin:8px 0 0"><a href="https://aaafoundation.org/summary-of-longroad-research-on-older-drivers-from-the-aaa-foundation-for-traffic-safety-2017-2025/" target="_blank" rel="noopener noreferrer">Read Report</a></p>
 </article>
 
-<article class="pub-item" data-year="2024" data-title="The Effect of Human-Machine Interface Modality, Specificity, and Timing on Driver Performance and Behavior While Using Vehicle Automation" data-authors="M. Wang, J. Parker, N. Wong, S. Mehrotra, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey">
-  <time datetime="2024">2024</time>
-  <div>The Effect of Human-Machine Interface Modality, Specificity, and Timing on Driver Performance and Behavior While Using Vehicle Automation</div>
-  <div style="color:var(--muted)">M. Wang, <strong>J. Parker</strong>, N. Wong, S. Mehrotra, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey<br>Accident Analysis &amp; Prevention</div>
-  <p style="margin:8px 0 0"><a href="https://doi.org/10.1016/j.aap.2024.03.007" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+<article class="pub-item" data-year="2024" data-type="journal" data-title="Human-Machine Interfaces and Vehicle Automation: A Review of the Literature and Recommendations for System Design, Feedback, and Alerts" data-authors="M. Wang, S. Mehrotra, N. Wong, J. Parker, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey">
+  <div class="pub-item-meta"><time datetime="2024">2024</time><span class="pub-badge pub-badge-journal">Journal</span></div>
+  <div class="pub-item-title">Human-Machine Interfaces and Vehicle Automation: A Review of the Literature and Recommendations for System Design, Feedback, and Alerts</div>
+  <div class="pub-item-venue">M. Wang, S. Mehrotra, N. Wong, <strong>J. Parker</strong>, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey<br>Transportation Research Part F: Traffic Psychology and Behaviour</div>
+  <p style="margin:8px 0 0"><a href="https://doi.org/10.1016/j.trf.2024.01.001" target="_blank" rel="noopener noreferrer">Read Article</a></p>
 </article>
 
-<article class="pub-item" data-year="2023" data-title="The Effect of Driving Style on Responses to Unexpected Vehicle Cyberattacks" data-authors="F. Zhang, M. Wang, J. Parker, S. C. Roberts">
-  <time datetime="2023">2023</time>
-  <div>The Effect of Driving Style on Responses to Unexpected Vehicle Cyberattacks</div>
-  <div style="color:var(--muted)">F. Zhang, M. Wang, <strong>J. Parker</strong>, S. C. Roberts<br>Safety, 9(1), 5</div>
-  <p style="margin:8px 0 0"><a href="https://doi.org/10.3390/safety9010005" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+<article class="pub-item" data-year="2024" data-type="journal" data-title="A simulator study assessing the effectiveness of training and warning systems on drivers' response performance to vehicle cyberattacks" data-authors="M. Wang, J. Parker, F. Zhang, S. C. Roberts">
+  <div class="pub-item-meta"><time datetime="2024">2024</time><span class="pub-badge pub-badge-journal">Journal</span></div>
+  <div class="pub-item-title">A simulator study assessing the effectiveness of training and warning systems on drivers' response performance to vehicle cyberattacks</div>
+  <div class="pub-item-venue">M. Wang, <strong>J. Parker</strong>, F. Zhang, S. C. Roberts<br>Accident Analysis &amp; Prevention</div>
+  <p style="margin:8px 0 0"><a href="https://doi.org/10.1016/j.aap.2024.107644" target="_blank" rel="noopener noreferrer">Read Article</a></p>
 </article>
 
-<article class="pub-item" data-year="2023" data-title="Do Researchers Use the Levels of Automation Appropriately? How Automation is Discussed in Research" data-authors="J. Parker, J. D. Lee, A. McDonald, P. Rau, B. Philips">
-  <time datetime="2023">2023</time>
-  <div>Do Researchers Use the Levels of Automation Appropriately? How Automation is Discussed in Research</div>
-  <div style="color:var(--muted)"><strong>J. Parker</strong>, J. D. Lee, A. McDonald, P. Rau, B. Philips<br>Journal of Cognitive Engineering and Decision Making</div>
+<article class="pub-item" data-year="2024" data-type="journal" data-title="The Effect of Human-Machine Interface Modality, Specificity, and Timing on Driver Performance and Behavior While Using Vehicle Automation" data-authors="M. Wang, J. Parker, N. Wong, S. Mehrotra, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey">
+  <div class="pub-item-meta"><time datetime="2024">2024</time><span class="pub-badge pub-badge-journal">Journal</span></div>
+  <div class="pub-item-title">The Effect of Human-Machine Interface Modality, Specificity, and Timing on Driver Performance and Behavior While Using Vehicle Automation</div>
+  <div class="pub-item-venue">M. Wang, <strong>J. Parker</strong>, N. Wong, S. Mehrotra, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey<br>Accident Analysis &amp; Prevention</div>
+  <p style="margin:8px 0 0"><a href="https://doi.org/10.1016/j.aap.2024.107606" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+</article>
+
+<article class="pub-item" data-year="2023" data-type="journal" data-title="Do Researchers Use the Levels of Automation Appropriately? How Automation is Discussed in Research" data-authors="J. Parker, J. D. Lee, A. McDonald, P. Rau, B. Philips">
+  <div class="pub-item-meta"><time datetime="2023">2023</time><span class="pub-badge pub-badge-journal">Journal</span></div>
+  <div class="pub-item-title">Do Researchers Use the Levels of Automation Appropriately? How Automation is Discussed in Research</div>
+  <div class="pub-item-venue"><strong>J. Parker</strong>, J. D. Lee, A. McDonald, P. Rau, B. Philips<br>Journal of Cognitive Engineering and Decision Making</div>
   <p style="margin:8px 0 0"><a href="https://doi.org/10.1177/15553434231100123" target="_blank" rel="noopener noreferrer">Read Article</a></p>
 </article>
 
-<article class="pub-item" data-year="2023" data-title="Bimodal trust: High and low trust in vehicle automation influence response to automation errors" data-authors="A. V. Kamaraj, J. Lee, J. Parker, J. E. Domeyer, S.-Y. Liu, J. D. Lee">
-  <time datetime="2023">2023</time>
-  <div>Bimodal trust: High and low trust in vehicle automation influence response to automation errors</div>
-  <div style="color:var(--muted)">A. V. Kamaraj, J. Lee, <strong>J. Parker</strong>, J. E. Domeyer, S.Y. Liu, J. D. Lee<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 67(1), 1144–1149</div>
+<article class="pub-item" data-year="2023" data-type="conference" data-title="Bimodal trust: High and low trust in vehicle automation influence response to automation errors" data-authors="A. V. Kamaraj, J. Lee, J. Parker, J. E. Domeyer, S.-Y. Liu, J. D. Lee">
+  <div class="pub-item-meta"><time datetime="2023">2023</time><span class="pub-badge pub-badge-conference">Conference</span></div>
+  <div class="pub-item-title">Bimodal trust: High and low trust in vehicle automation influence response to automation errors</div>
+  <div class="pub-item-venue">A. V. Kamaraj, J. Lee, <strong>J. Parker</strong>, J. E. Domeyer, S.-Y. Liu, J. D. Lee<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 67(1), 1144–1149</div>
   <p style="margin:8px 0 0"><a href="https://doi.org/10.1177/10711813231144789" target="_blank" rel="noopener noreferrer">Read Article</a></p>
 </article>
 
-<article class="pub-item" data-year="2023" data-title="Tossing your Tylenol: Supporting sustainable behavior in medication disposal through label design" data-authors="V. Renata, J. Parker, S. Loganathar, A. V. Kamaraj, M. Li">
-  <time datetime="2023">2023</time>
-  <div>Tossing your Tylenol: Supporting sustainable behavior in medication disposal through label design</div>
-  <div style="color:var(--muted)">V. Renata, <strong>J. Parker</strong>, S. Loganathar, A. V. Kamaraj, M. Li<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 67(1), 2466–2471</div>
-  <p style="margin:8px 0 0"><a href="https://doi.org/10.1177/10711813231145678" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+<article class="pub-item" data-year="2023" data-type="conference" data-title="Tossing your Tylenol: Supporting sustainable behavior in medication disposal through label design" data-authors="V. Renata, J. Parker, S. Loganathar, A. V. Kamaraj, M. Li">
+  <div class="pub-item-meta"><time datetime="2023">2023</time><span class="pub-badge pub-badge-conference">Conference</span></div>
+  <div class="pub-item-title">Tossing your Tylenol: Supporting sustainable behavior in medication disposal through label design</div>
+  <div class="pub-item-venue">V. Renata, <strong>J. Parker</strong>, S. Loganathar, A. V. Kamaraj, M. Li<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 67(1), 2466–2471</div>
+  <p style="margin:8px 0 0"><a href="https://doi.org/10.1177/10711813231192218" target="_blank" rel="noopener noreferrer">Read Article</a></p>
 </article>
 
-<article class="pub-item" data-year="2023" data-title="Impact of level 2 automation and ADHD symptomatology on young drivers’ attention maintenance" data-authors="J. Parker, M. Wang, B. Ojuri, S. C. Roberts, J. McDermott, D. L. Fisher">
-  <time datetime="2023">2023</time>
-  <div>Impact of level 2 automation and ADHD symptomatology on young drivers’ attention maintenance</div>
-  <div style="color:var(--muted)"><strong>J. Parker</strong>, M. Wang, B. Ojuri, S. C. Roberts, J. McDermott, D. L. Fisher<br>Transportation Research Part F: Traffic Psychology and Behaviour, 94, 504–516</div>
+<article class="pub-item" data-year="2023" data-type="journal" data-title="The Effect of Driving Style on Responses to Unexpected Vehicle Cyberattacks" data-authors="F. Zhang, M. Wang, J. Parker, S. C. Roberts">
+  <div class="pub-item-meta"><time datetime="2023">2023</time><span class="pub-badge pub-badge-journal">Journal</span></div>
+  <div class="pub-item-title">The Effect of Driving Style on Responses to Unexpected Vehicle Cyberattacks</div>
+  <div class="pub-item-venue">F. Zhang, M. Wang, <strong>J. Parker</strong>, S. C. Roberts<br>Safety, 9(1), 5</div>
+  <p style="margin:8px 0 0"><a href="https://doi.org/10.3390/safety9010005" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+</article>
+
+<article class="pub-item" data-year="2023" data-type="journal" data-title="Impact of level 2 automation and ADHD symptomatology on young drivers' attention maintenance" data-authors="J. Parker, M. Wang, B. Ojuri, S. C. Roberts, J. McDermott, D. L. Fisher">
+  <div class="pub-item-meta"><time datetime="2023">2023</time><span class="pub-badge pub-badge-journal">Journal</span></div>
+  <div class="pub-item-title">Impact of level 2 automation and ADHD symptomatology on young drivers' attention maintenance</div>
+  <div class="pub-item-venue"><strong>J. Parker</strong>, M. Wang, B. Ojuri, S. C. Roberts, J. McDermott, D. L. Fisher<br>Transportation Research Part F: Traffic Psychology and Behaviour, 94, 504–516</div>
   <p style="margin:8px 0 0"><a href="https://doi.org/10.1016/j.trf.2023.04.009" target="_blank" rel="noopener noreferrer">Read Article</a></p>
 </article>
-        
+
+<article class="pub-item" data-year="2023" data-type="report" data-title="Human-Machine Interfaces and Vehicle Automation: The Effect of HMI Design on Driver Performance and Behavior" data-authors="M. Wang, J. Parker, N. Wong, S. Mehrotra, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey">
+  <div class="pub-item-meta"><time datetime="2023">2023</time><span class="pub-badge pub-badge-report">Report</span></div>
+  <div class="pub-item-title">Human-Machine Interfaces and Vehicle Automation: The Effect of HMI Design on Driver Performance and Behavior</div>
+  <div class="pub-item-venue">M. Wang, <strong>J. Parker</strong>, N. Wong, S. Mehrotra, S. C. Roberts, K. Woon, A. Romo, W. J. Horrey<br>AAA Foundation for Traffic Safety – Technical Report</div>
+  <p style="margin:8px 0 0"><a href="https://aaafoundation.org/human-machine-interfaces-and-vehicle-automation-the-effect-of-hmi-design-on-driver-performance-and-behavior/" target="_blank" rel="noopener noreferrer">Read Report</a></p>
+</article>
+
+<article class="pub-item" data-year="2022" data-type="conference" data-title="How do drivers respond to vehicle cyberattacks? A driving simulator study" data-authors="J. Parker, F. Zhang, M. Wang, S. C. Roberts">
+  <div class="pub-item-meta"><time datetime="2022">2022</time><span class="pub-badge pub-badge-conference">Conference</span></div>
+  <div class="pub-item-title">How do Drivers Respond to Vehicle Cyberattacks? A Driving Simulator Study</div>
+  <div class="pub-item-venue"><strong>J. Parker</strong>, F. Zhang, M. Wang, S. C. Roberts<br>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 66(1), 737–741</div>
+  <p style="margin:8px 0 0"><a href="https://doi.org/10.1177/1071181322661506" target="_blank" rel="noopener noreferrer">Read Article</a></p>
+</article>
+
       </div>
-      
+
     </section>
-    
+
     <!-- PROJECTS -->
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Selected Projects</h2>
@@ -276,29 +261,126 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3>Aggressive Driving & Road Rage, AAA Foundation for Traffic Safety</h3>
           <p>Analyzed data from a nationally representative sample of American drivers to understand the perceptions and understanding of road rage, in addition to the relationships between aggressive driving behaviors.</p>
         </article>
-      
+
 
       <article class="card" role="listitem">
           <h3>AI Enabled Manuals to Improve Driver Behavior, Toyota CSRC</h3>
-          <p>Investigated AI enabled tools to improve mental models and warning responses in automated vehicles.</p>
+          <p>Investigated AI-enabled tools to improve mental models and warning responses in automated vehicles.</p>
         </article>
+      </div>
+      <div style="margin-top:16px;"><a href="projects.html">View all projects →</a></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Programming</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">C#</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Research Methods</h3>
+          <div class="tags">
+            <span class="tag">Experimental Design</span>
+            <span class="tag">User Experience Research</span>
+            <span class="tag">Statistical Analysis</span>
+            <span class="tag">Literature Review</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Statistics &amp; Modeling</h3>
+          <div class="tags">
+            <span class="tag">Bayesian Statistics</span>
+            <span class="tag">Structural Equation Modeling</span>
+            <span class="tag">Causal Inference</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <div class="tags">
+            <span class="tag">Unity</span>
+            <span class="tag">CARLA Simulator</span>
+            <span class="tag">NLP</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS: Skills -->
-    <section id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <div class="tags" aria-hidden="false">
-        <span class="tag">Python</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">User Experience Research</span>
+    <!-- AWARDS -->
+    <section id="awards" aria-labelledby="awards-heading">
+      <h2 id="awards-heading">Honors &amp; Awards</h2>
+      <div class="awards-list">
+
+        <div class="award-item">
+          <div class="award-year">2025</div>
+          <div class="award-body">
+            <h3>Three Minute Thesis Finalist</h3>
+            <p>UW-Madison Graduate School — Presented a condensed overview of dissertation research in three minutes.</p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-year">2024</div>
+          <div class="award-body">
+            <h3><a href="https://engineering.wisc.edu/blog/meet-grad-student-jahinaya-parker-making-sense-of-multitasking/" target="_blank" rel="noopener noreferrer">Student Spotlight: Making Sense of Multitasking</a></h3>
+            <p>UW-Madison College of Engineering — Featured graduate student profile on dissertation research and motivations.</p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-year">2022–</div>
+          <div class="award-body">
+            <h3>Graduate Engineering Research Scholars Fellowship</h3>
+            <p>University of Wisconsin-Madison</p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-year">2022–</div>
+          <div class="award-body">
+            <h3>ISyE Graduate Scholarship</h3>
+            <p>University of Wisconsin-Madison, Dept of Industrial and Systems Engineering</p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-year">2022</div>
+          <div class="award-body">
+            <h3><a href="https://www.umass.edu/gateway/article/making-driving-technology-work-humans" target="_blank" rel="noopener noreferrer">Rising Researcher</a></h3>
+            <p>University of Massachusetts Amherst — Honors undergraduates who demonstrate research excellence and outstanding creativity.</p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-year">2022</div>
+          <div class="award-body">
+            <h3><a href="https://www.umass.edu/news/article/2021-22-gerald-f-scanlon-student-employee-year-award-recipients-announced" target="_blank" rel="noopener noreferrer">Gerald F. Scanlon Student Employee of the Year</a></h3>
+            <p>University of Massachusetts Amherst — Nominated by supervisors at the Center for Women and Community.</p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-year">2022</div>
+          <div class="award-body">
+            <h3>First Place — Student Design Competition</h3>
+            <p>University of Massachusetts Amherst</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact</h2>
-      <p style="margin-top:8px">Email: <a href="mailto: parker28@wisc.edu">parker28@wisc.edu</a></p>
+      <p style="margin-top:8px">Email: <a href="mailto:parker28@wisc.edu">parker28@wisc.edu</a></p>
       <p style="margin-top:6px">Profiles:
         <a href="https://scholar.google.com/citations?user=DfvHj_MAAAAJ&hl=en&authuser=1&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a> ·
         <a href="https://orcid.org/0000-0001-7583-5174" target="_blank" rel="noopener noreferrer">ORCID</a> ·
